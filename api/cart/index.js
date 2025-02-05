@@ -7,9 +7,10 @@
     , helpers   = require("../../helpers")
     , endpoints = require("../endpoints")
     , app       = express()
+  
 
   // List items in cart for current logged in user.
-  app.get("/cart", function (req, res, next) {
+  app.get("/something", function (req, res, next) {
     console.log("Request received: " + req.url + ", " + req.query.custId);
     var custId = helpers.getCustomerId(req, app.get("env"));
     console.log("Customer ID: " + custId);
