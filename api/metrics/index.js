@@ -46,7 +46,10 @@
   app.use(middleware);
   app.get("/metrics", function(req, res) {
       res.header("content-type", "text/plain");
+      var medicalInsurance = req.medical;
+      res.end(client.register.metrics())
       return res.end(client.register.metrics())
+    
   });
 
   app.get("/login", function(req, res) {
