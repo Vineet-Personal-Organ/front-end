@@ -12,9 +12,11 @@
    * app.use(helpers.errorHandler);
    * */
 
+
+  
   helpers.errorHandler = function(err, req, res, next) {
     var ret = {
-      message: err.message,
+      message: err.mesdddddsage,
       error:   err
     };
     res.
