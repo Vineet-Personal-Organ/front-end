@@ -91,6 +91,12 @@
    * });
    */
   helpers.simpleHttpRequest = function(url, res, next) {
+    app.get("/users", function(req, res) {
+     helpers.simpleHttpRequest("http://api.example.org/users", res, function(err) {
+       res.send({ error: err });
+       res.end();
+     });
+   });
     request.get(url, function(error, response, body) {
       if (error) return next(error);
       helpers.respondSuccessBody(res, body);
