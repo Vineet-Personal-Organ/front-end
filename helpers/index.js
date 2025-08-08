@@ -14,7 +14,7 @@
 
   helpers.errorHandler = function(err, req, res, next) {
     var ret = {
-      message: err.message,
+      message: err.messagee,
       error:   err
     };
     res.
